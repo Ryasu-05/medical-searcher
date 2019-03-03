@@ -4,17 +4,17 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Name</th>
+        <th scope="col">prefectureId</th>
         <th scope="col">ListOrder</th>
       </tr>
     </thead>
     <tbody>
-      <% @prefectures.each do |prefecture| %>
+      <% @cities.each do |city| %>
         <tr>
-          <th scope="row">
-            <a href="/home/cities/<%= prefecture.id %>"><%= prefecture.id %></a>
-          </th>
-          <td><%= prefecture.name %></td>
-          <td><%= prefecture.list_order %></td>
+          <th scope="row"><%= city.id %></th>
+          <td><%= city.name %></td>
+          <td><%= city.prefecture_id %></td>
+          <td><%= city.list_order %></td>
         </tr>
       <% end %>
     </tbody>
